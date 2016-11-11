@@ -7,5 +7,6 @@ public class Calculate {
 		Frame stockFrame = new Frame();
 	/*PositionSize position = new PositionSize();
 	position.getPositionSize();*/
+		//test comment
 	}
 }
