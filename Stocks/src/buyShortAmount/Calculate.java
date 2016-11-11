@@ -8,5 +8,6 @@ public class Calculate {
 	/*PositionSize position = new PositionSize();
 	position.getPositionSize();*/
 		//test comment
+		//another test comment
 	}
 }
