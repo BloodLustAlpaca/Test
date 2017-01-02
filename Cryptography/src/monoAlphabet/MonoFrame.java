@@ -1,6 +1,8 @@
 package monoAlphabet;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -30,11 +32,17 @@ public class MonoFrame  extends JFrame{
 		westPanel.add(encryptButton, BorderLayout.NORTH);
 		westPanel.add(decryptButton, BorderLayout.SOUTH);
 		westPanel.add(keyLabel, BorderLayout.CENTER);
+		encryptButton.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e){
+			Cipher cipher = new Cipher(keyBox.getText());
+			System.out.println("This is the Cipher: " + cipher.makeCipher());
+		}});
+		
 		
 		eastPanel.setLayout(new BorderLayout());
 		eastPanel.add(plainBox, BorderLayout.NORTH);
 		eastPanel.add(encryptBox, BorderLayout.SOUTH);
 		eastPanel.add(keyBox, BorderLayout.CENTER);
+		
 		
 		frame.add(westPanel, BorderLayout.WEST);
 		frame.add(eastPanel, BorderLayout.EAST);
